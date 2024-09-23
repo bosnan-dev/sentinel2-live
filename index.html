@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentinel v.2.0</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logocont {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        
+        .file-input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .file-input-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .file-input-label:hover {
+            background-color: #2980b9;
+        }
+
+        #imageInput {
+            display: none;
+        }
+
+        
+        #predictButton {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #predictButton:hover {
+            background-color: #27ae60;
+        }
+
+       
+        #result {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #ecf0f1;
+            border-radius: 4px;
+        }
+
+       
+        #previewContainer {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #previewImage {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 4px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .line2, .line3 {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+
+            .line1 {
+                display: none;
+            }
+
+            .line2 {
+                display: block;
+                margin-bottom: 0px;
+            }
+
+            .line3 {
+                display: block;
+            }
+          
+
+            #predictButton {
+                width: 100%;
+            }
+
+            .file-input-label {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+  <script type="module" crossorigin src="/assets/index-D-47nz_q.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logocont">
+            <img style="width: 200px;" src="/assets/enerlogo-BlTnAbAl.png" alt="">
+        </div>
+        <br>
+        <h1 class="line1">Sentinel v.2.0 - Clasificador 3 Clases</h1>
+        <h1 class="line2">Sentinel v.2.0</h1>
+        <h1 class="line3">Clasificador 3 Clases</h1>
+        <div class="file-input-container">
+            <label for="imageInput" class="file-input-label">Escoge una imagen</label>
+            <input type="file" id="imageInput" accept="image/*">
+        </div>
+        <button id="predictButton">Predecir</button>
+        <div id="result"></div>
+        <div id="previewContainer">
+            <img id="previewImage" alt="Preview">
+        </div>
+    </div>
+
+    <script src="/assets/index-D-47nz_q.js"></script>
+</body>
+</html>
